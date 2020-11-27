@@ -168,6 +168,6 @@ fn build_project_in_dir(dir: &PathBuf) {
         )),
         dir.join(format!("dist/{}.wasm", name)),
     )
-    .expect("could not copy");
+    .expect(format!("could not copy {:?}", name));
     println!("    {} webassembly target", "Finished".green().bold());
 }
